@@ -12,7 +12,7 @@ function PlantPage() {
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "Application/JSON"
       },
       body: JSON.stringify(newPlant)
     })
@@ -21,7 +21,7 @@ function PlantPage() {
   };
 
   // const handleSearch = (searchTerm) => {
-    const filtered = plants.filter((plant) =>
+    const filteredPlants = plants.filter((plant) =>
       plant.name.toLowerCase().includes(searchPlant.toLowerCase())
     );
   // };
@@ -36,7 +36,7 @@ function PlantPage() {
     <main>
       <NewPlantForm addPlant={addPlant}/>
       <Search searchPlant={searchPlant} setSearchPlant={setSearchPlant}/>
-      <PlantList plants={filtered}/>
+      <PlantList plants={filteredPlants}/>
     </main>
   );
 }
