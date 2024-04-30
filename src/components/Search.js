@@ -15,6 +15,7 @@ function Search({searchPlant, setSearchPlant}) {
       <input
         type="text"
         id="search"
+        placeholder="Type a name to search..."
         value={searchPlant}
         onChange={handleChange}
       />
